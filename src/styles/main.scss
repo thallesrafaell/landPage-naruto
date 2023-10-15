@@ -1,0 +1,56 @@
+@use 'hero';
+@use 'variaveis.scss';
+@use 'reset';
+
+
+
+body {
+    background-color: variaveis.$bgColor;
+}
+
+@mixin text ($fontSize: 24px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$fontColorPrimary
+}
+
+@mixin title ($fontSize: 48px){
+    @include text($fontSize);
+    color: variaveis.$fontColorSecundary
+
+}
+
+.text {
+    @include text;
+    font-family: Rubik, sans-serif;
+}
+
+.title {
+    @include title;
+    font-family: Secular One, sans-serif;
+}
+
+.menu{
+    z-index: 10;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    &__itens{
+        display: flex;
+        &__item{
+            padding-left: 20px;
+            list-style: none;
+            &__links{
+                text-decoration: none;
+                font-family: Secular One, sans-serif;
+            }
+
+        }
+        
+        
+    }
+    }
+   
+
