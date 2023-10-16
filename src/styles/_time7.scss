@@ -2,7 +2,7 @@
 
 .time7{
     height: 100vh;
-    padding-top: 160px;
+    padding-top: 100px;
 
     h2{
         margin-bottom: 20px;
@@ -16,9 +16,16 @@
         margin-top: 40px;
 
         &__card{
-            width: 100%;
+            width: 95%;
             border-radius: 15px;
             overflow: hidden;
+            transform: scale(1);
+            transition-duration: 0.4s;
+
+            &:hover{
+                transform: scale(1.1);
+                transition-duration: 0.4s;
+            }
             
 
             img{
