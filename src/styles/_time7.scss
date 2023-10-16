@@ -1,0 +1,29 @@
+@use 'variaveis';
+
+.time7{
+    height: 100vh;
+    padding-top: 160px;
+
+    h2{
+        margin-bottom: 20px;
+    }
+
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        gap: 20px;
+        margin-top: 40px;
+
+        &__card{
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

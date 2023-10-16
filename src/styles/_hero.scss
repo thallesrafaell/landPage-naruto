@@ -4,6 +4,7 @@
         position: relative;
         overflow: hidden;
         height: 100vh;
+        margin-top: -65px;
 
 
         &__gradient::after{
@@ -19,13 +20,19 @@
         
         &__container{
         position: absolute;
-        top: 35%;
-        left: 10%;
-        max-width: 550px;
+        top: 20%;
+        left: 5%;
+        max-width: 450px;
+        text-align: center;
         z-index: 1;
 
+        p{
+            text-align: justify;
+        }
+
         img{
-            width: 100%;
+            text-align: center;
+            width: 90%;
         }
         } 
     
