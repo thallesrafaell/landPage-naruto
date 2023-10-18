@@ -2,14 +2,21 @@
 @use 'variaveis.scss';
 @use 'reset';
 @use 'time7';
+@use 'curiosidades';
 
 
 
 body {
     background-color: variaveis.$bgColor;
+
+    section{
+        height: 100vh;
+    }
+    
 }
 
-@mixin text ($fontSize: 24px) {
+
+@mixin text ($fontSize: 18px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$fontColorPrimary
@@ -24,6 +31,12 @@ body {
 .text {
     @include text;
     font-family: Rubik, sans-serif;
+    text-indent: 20px;
+}
+
+.text--small {
+    @include text(18px);
+    font-family: Rubik, sans-serif;
 }
 
 .title {
@@ -31,9 +44,9 @@ body {
     font-family: Secular One, sans-serif;
 }
 
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
+.title--small {
+    @include title(22px);
+    font-family: Secular One, sans-serif;
 }
 
 .menu{

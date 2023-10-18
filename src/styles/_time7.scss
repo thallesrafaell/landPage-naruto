@@ -1,12 +1,13 @@
 @use 'variaveis';
 
 .time7{
-    height: 100vh;
-    padding-top: 100px;
+    padding: 5.6VW;
+
 
     h2{
         margin-bottom: 20px;
     }
+
 
     &__cards{
         display: grid;
@@ -31,6 +32,40 @@
             img{
                 width: 100%;
             }
+
+            &__info {
+                padding: 10px;
+                p{
+                    color: white;
+                }
+                
+            }
         }
+
+        &__kakashi{
+            background-color: variaveis.$colorKakashi;
+            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorKakashi, 10%);
+        }
+
+        &__naruto{
+            background-color: variaveis.$colorNaruto;
+            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorNaruto, 10%);
+        }
+
+        &__sakura{
+            background-color: variaveis.$colorSakura;
+            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorSakura, 10%);
+        }
+
+        &__sasuske{
+            background-color:variaveis.$colorSasuske ;
+            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorSasuske, 10%);
+        }
+
+
     }
+}
+
+.padding{
+    margin-top: 10px;
 }
