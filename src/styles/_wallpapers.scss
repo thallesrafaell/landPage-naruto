@@ -1,0 +1,19 @@
+.wallpapers {
+  @media (max-width: 1023px) {
+    height: 400px;
+  }
+
+  @media (max-width: 767px) {
+    height: 400px;
+  }
+  .carousel-inner {
+    height: 100vh;
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      height: 100%;
+    }
+  }
+}

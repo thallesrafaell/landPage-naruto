@@ -1,71 +1,90 @@
-@use 'variaveis';
+@use "variaveis";
 
-.time7{
-    padding: 5.6VW;
+.time7 {
+  padding: 5.6vw;
 
+  @media (max-width: 1023px) {
+    height: 100vh;
+    margin-bottom: 400px;
+  }
 
-    h2{
-        margin-bottom: 20px;
+  @media (max-width: 767px) {
+    height: 100vh;
+    margin-bottom: 2000px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 20px;
+    margin-top: 40px;
+
+    @media (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      column-gap: 10px;
     }
 
+    @media (max-width: 767px) {
+        grid-template-columns:  1fr;
+        gap: 10px;
+        column-gap: 10px;
+      }
 
-    &__cards{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+    &__card {
+      width: 95%;
+      border-radius: 15px;
+      overflow: hidden;
+      transform: scale(1);
+      transition-duration: 0.4s;
+
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 0.4s;
+        @media (max-width: 1023px) {
+          transform: scale(1);
+        }
+      }
+
+      img {
         width: 100%;
-        gap: 20px;
-        margin-top: 40px;
+      }
 
-        &__card{
-            width: 95%;
-            border-radius: 15px;
-            overflow: hidden;
-            transform: scale(1);
-            transition-duration: 0.4s;
-
-            &:hover{
-                transform: scale(1.1);
-                transition-duration: 0.4s;
-            }
-            
-
-            img{
-                width: 100%;
-            }
-
-            &__info {
-                padding: 10px;
-                p{
-                    color: white;
-                }
-                
-            }
+      &__info {
+        padding: 10px;
+        p {
+          color: white;
         }
-
-        &__kakashi{
-            background-color: variaveis.$colorKakashi;
-            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorKakashi, 10%);
-        }
-
-        &__naruto{
-            background-color: variaveis.$colorNaruto;
-            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorNaruto, 10%);
-        }
-
-        &__sakura{
-            background-color: variaveis.$colorSakura;
-            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorSakura, 10%);
-        }
-
-        &__sasuske{
-            background-color:variaveis.$colorSasuske ;
-            box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorSasuske, 10%);
-        }
-
-
+      }
     }
+
+    &__kakashi {
+      background-color: variaveis.$colorKakashi;
+      box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorKakashi, 10%);
+    }
+
+    &__naruto {
+      background-color: variaveis.$colorNaruto;
+      box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorNaruto, 10%);
+    }
+
+    &__sakura {
+      background-color: variaveis.$colorSakura;
+      box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorSakura, 10%);
+    }
+
+    &__sasuske {
+      background-color: variaveis.$colorSasuske;
+      box-shadow: 1px 1px 3px 1px lighten(variaveis.$colorSasuske, 10%);
+    }
+  }
 }
 
-.padding{
-    margin-top: 10px;
+.padding {
+  margin-top: 10px;
 }

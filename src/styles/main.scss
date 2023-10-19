@@ -1,8 +1,10 @@
+@use 'menu';
 @use 'hero';
 @use 'variaveis.scss';
 @use 'reset';
 @use 'time7';
 @use 'curiosidades';
+@use 'wallpapers';
 
 
 
@@ -26,6 +28,7 @@ body {
     @include text($fontSize);
     color: variaveis.$fontColorSecundary
 
+    
 }
 
 .text {
@@ -49,51 +52,5 @@ body {
     font-family: Secular One, sans-serif;
 }
 
-.menu{
-    z-index: 10;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    left: 0;
-
-    &__itens{
-        display: flex;
-        &__item{
-            padding-left: 20px;
-            list-style: none;
-            &__links{
-                text-decoration: none;
-                font-family: Secular One, sans-serif;
-                position: relative;
-                &:hover{
-                    color: variaveis.$fontColorSecundary;
-                }
-
-                &::after{
-                    content: ' ';
-                    position: absolute;
-                    left: 0;
-                    bottom: -2px;
-                    color: variaveis.$fontColorSecundary;
-                    width: 75%;
-                    height: 2px;
-                    background-color:#f37703;
-                    transform: scale(0);
-                    transition-duration: 0.4s;
-
-                }
-
-                &:hover::after{
-                    transform: scale(1);
-                    transition-duration: 0.4s;
-
-                }
-            }
-
-        }
-        
-        
-    }
-    }
 
 
