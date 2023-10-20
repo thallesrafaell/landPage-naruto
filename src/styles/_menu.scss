@@ -1,12 +1,13 @@
 @use 'variaveis.scss';
 
 .menu{
-    z-index: 10;
+    
     padding: 15px;
-    position: sticky;
+    position: fixed;
     background-image: transparent;
     top: 0;
     left: 0;
+    z-index: 1000000000;
 
     &__itens{
         display: flex;
